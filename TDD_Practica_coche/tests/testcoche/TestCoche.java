@@ -20,9 +20,16 @@ class TestCoche {
 	
 	public void test_al_decelerar_un_coche_su_velocidad_disminuye() {
 		Coche nuevoCoche = new Coche ();
-		nuevoCoche.decelerar(30);
+		nuevoCoche.velocidad=50;
+		nuevoCoche.decelerar(20);
 		Assertions.assertEquals(30, nuevoCoche.velocidad);
 	}
 	
+	public void test_al_decelerar_un_coche_su_velocidad_no_puede_ser_menor_que_cero() {
+		Coche nuevoCoche = new Coche ();
+		nuevoCoche.velocidad=50;
+		nuevoCoche.decelerar(80);
+		Assertions.assertEquals(0, nuevoCoche.velocidad);
+	}
  
 }
