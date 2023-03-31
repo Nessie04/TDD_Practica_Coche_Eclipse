@@ -2,6 +2,6 @@ package testcoche;
 
 public class Coche {
 
-	public Integer velocidad;
+	public int velocidad;
 
 }
